@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <form action="/access/wallet" method="post">
+      <input type="text" name="wallet" value="">
+      <input type="text" name="keyphrase" value="">
+      <input type="submit" name="Submit" value="">
+    </form>
+    {% if check %}
+      <span>Credenziali Valide</span>
+    {% else %}
+      <span>Credenziali Non Valide</span>
+    {% endif %}
+  </body>
+</html>

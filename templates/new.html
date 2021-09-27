@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <span>New Wallet Generate! {{wallet.wallet}}</span>
+    <br>
+    <span>Your Address: {{wallet.address}}</span>
+    <br>
+    <span>Your Secret Password: {{wallet.keyphrase}}</span>
+    <span>
+      <form action="/transaction" method="get">
+        <input type="submit" value="View Wallets Balance" name="Submit" id="frm1_submit" />
+      </form>
+    </span>
+  </body>
+</html>

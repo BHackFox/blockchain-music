@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    {%for wallet in blockchain.wallets%}
+    <span>Wallets {{loop.index}}:</span>
+    <a href="/address/{{wallet.wallet}}">View transactions</a>
+    <br>
+    <small>Wallet: {{wallet.wallet}} {{wallet.time}}</small>
+    <br>
+    <small>Amount: {{blockchain.getBalance(wallet.wallet)}}</small>
+    <br>
+    {%endfor%}
+    <span>
+      <form action="/wallet" method="get">
+        <input type="submit" value="Create new Wallet" name="Submit" id="frm1_submit" />
+      </form>
+    </span>
+  </body>
+</html>

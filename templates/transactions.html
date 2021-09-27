@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <span><h1>{{transaction["wallet"]}}</h1></span>
+    <br>
+    {% for i in transaction["transactions"] %}
+      <span>Sender: <a href='/address/{{i["sender"]}}'>{{i["sender"]}}</a></span>
+      <br>
+      <span>reciever: <a href='/address/{{i["reciever"]}}'>{{i["reciever"]}}</a></span>
+      <br>
+      <span>amt: {{i["amt"]}}</span>
+      <br>
+      <span>block: {{i["block"]}}</span>
+      <br>
+    {% endfor %}
+  </body>
+</html>
